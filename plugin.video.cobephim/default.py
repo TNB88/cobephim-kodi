@@ -334,7 +334,8 @@ def show_episodes(movie_id, slug, movie_name):
     xbmcplugin.setContent(HANDLE, "episodes")
     try:
         episodes = request_json(API_BASE + "/episodes/by-idMovie/" + str(movie_id))
-        episodes.sort(key=lambda item: (-episode_number(item.get("name")), server_rank(item.get("server")), item.get("server", "")))
+        # Tập nhỏ nhất phải đứng trước để khi mở phim bộ người dùng bắt đầu từ tập 1.
+        episodes.sort(key=lambda item: (episode_number(item.get("name")), server_rank(item.get("server")), item.get("server", "")))
         for episode in episodes:
             ep_name = episode_label(episode.get("name"))
             server = str(episode.get("server") or "")
