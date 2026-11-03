@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="plugin.video.cobephim" name="Cô Bé Phim" version="1.3.0" provider-name="TNB88">
+    <requires>
+        <import addon="xbmc.python" version="3.0.0" />
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="default.py">
+        <provides>video</provides>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <summary lang="vi_VN">Xem phim Cô Bé Phim trên Kodi</summary>
+        <description lang="vi_VN">Duyệt toàn bộ kho web, tự cập nhật tên miền từ GitHub, tìm kiếm và phát trực tiếp bằng Kodi VideoPlayer.</description>
+        <platform>all</platform>
+        <license>GPL-3.0-only</license>
+        <assets>
+            <icon>icon.png</icon>
+            <fanart>fanart.png</fanart>
+        </assets>
+    </extension>
+</addon>
